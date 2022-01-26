@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{siunitx}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{feynmf}
+\usepackage{url}
+
+\begin{document}
+
+\title{Exercise 1}
+\author{Nikita Kramarenko}
+\date{26.01.2022}
+\maketitle
+
+\centering
+Task 1
+\vspace*{0.5cm}
+
+Git repository with answers can be found at: \url{https://github.com/NikitaHIP/CompInHEP}
+\vspace*{0.5cm}
+
+\centering
+Task 2
+\vspace*{0.5cm}
+
+\begin{fmffile}{diagram}
+\begin{figure}[hbt!]
+  \centering
+  \begin{subfigure}[b]{0.3\linewidth}
+    \centering
+      \begin{fmfchar*}(100,80)
+      \fmfleft{i1,i2}
+      \fmfright{o1,o2}
+      \fmf{fermion}{i2,v2}
+      \fmf{fermion,tension=0.5}{v2,v1}
+      \fmf{fermion}{v1,i1}
+      \fmf{photon,tension=0.5}{v2,o2}
+      \fmf{photon}{v1,o1}
+      \fmflabel{$\gamma$}{o2}
+      \fmflabel{$\gamma$}{o1}
+      \fmflabel{$e^-$}{i2}
+      \fmflabel{$e^+$}{i1}
+    \end{fmfchar*}
+  \end{subfigure}
+  \hspace{5em}
+  \begin{subfigure}[b]{0.3\linewidth}
+    \centering
+      \begin{fmfchar*}(100,80)
+      \fmfleft{i1,i2}
+      \fmfright{o1,o2}
+      \fmf{fermion}{i2,v2}
+      \fmf{fermion,tension=0.5}{v2,v1}
+      \fmf{fermion}{v1,i1}
+      \fmf{photon}{v2,o2}
+      \fmf{photon,tension=0.5}{v1,o1}
+      \fmflabel{$\gamma$}{o2}
+      \fmflabel{$\gamma$}{o1}
+      \fmflabel{$e^-$}{i2}
+      \fmflabel{$e^+$}{i1}
+    \end{fmfchar*}
+  \end{subfigure}
+  \vspace*{0.5cm}
+  \caption{Feynman graphs for the lowest order contributions to electron-positron annihilation ~\cite{ParticlePhysicsMartin}.}
+  \label{FeynmanE-P}
+\end{figure}
+\end{fmffile}
+\clearpage
+
+\bibliography{library}{}
+\bibliographystyle{ieeetr}
+\end{document}
