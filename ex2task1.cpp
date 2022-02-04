@@ -6,6 +6,6 @@ int main() {
 	
 	cout << "Enter integer ";
 	cin >> integer;
-	cout << "Hello World " << integer << endl;  
+	cout << "Hello world " << integer << endl;  
 	return 0;                        
 }
